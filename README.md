@@ -44,27 +44,22 @@ ETL-Pipeline-Simulation/
  ETL Workflow Explanation:-
  
 1️⃣ Extract
-Connects to the MySQL database
-Reads data from the students table
-Loads the data into a Pandas DataFrame
+Connects to the MySQL database,
+Reads data from the students table,
+Loads the data into a Pandas DataFrame,
 
 2️⃣ Transform
-
-Handles missing values
-
-Converts text to lowercase and strips whitespace
-
-Filters students whose grade is greater than B
-
-Cleans and prepares data for loading
+Handles missing values,
+Converts text to lowercase and strips whitespace,
+Filters students whose grade is greater than B,
+Cleans and prepares data for loading,
 
 3️⃣ Load
+Inserts the transformed data back into MySQL,
+Updates or stores results in the existing table,
 
-Inserts the transformed data back into MySQL
+Database Schema:-
 
-Updates or stores results in the existing table
-
-🗄️ Database Schema (Example)
 CREATE TABLE students (
     student_id INT PRIMARY KEY,
     name VARCHAR(100),
@@ -74,57 +69,49 @@ CREATE TABLE students (
     department VARCHAR(50)
 );
 
-🚀 How to Run the Project
-Step 1: Clone the Repository
+How to Run the Project:-
+
+Step 1: Clone the Repository:
+
 git clone https://github.com/your-username/ETL-Pipeline-Simulation.git
 cd ETL-Pipeline-Simulation
 
-Step 2: Install Dependencies
+Step 2: Install Dependencies:
+
 pip install -r requirements.txt
 
-Step 3: Configure Database
+Step 3: Configure Database:
 
 Update MySQL credentials in db_connection.py
-
 Make sure MySQL server is running
 
-Step 4: Run ETL Scripts
+Step 4: Run ETL Scripts:
+
 python extract.py
 python transform.py
 python load.py
 
-📊 Sample Transformation Logic
-df = df[df["grade"] < "B"]
+Learning Outcomes:-
 
-📈 Learning Outcomes
+Practical understanding of ETL pipelines,
+Hands-on experience with Pandas & MySQL,
+Data filtering and transformation skills,
+Basic GitHub project management,
+Foundation for advanced data engineering projects,
 
-Practical understanding of ETL pipelines
-
-Hands-on experience with Pandas & MySQL
-
-Data filtering and transformation skills
-
-Basic GitHub project management
-
-Foundation for advanced data engineering projects
-
-📌 Future Enhancements
+Future Enhancements:-
 
 Add logging and error handling
-
 Automate ETL using schedulers
-
 Use large datasets
-
 Add data validation checks
-
 Deploy using Docker
-
-👨‍💻 Author
+ 
+Author:-
 
 Yukesh Dhakal
 Student | Python & Data Engineering Learner
 
-⭐ Acknowledgements
-
+Acknowledgements:-
 This project was created for educational purposes to understand ETL concepts and real-world data processing workflows.
+
